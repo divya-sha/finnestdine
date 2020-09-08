@@ -1,0 +1,532 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Lato', sans-serif;
+    line-height: 2.5rem;
+}
+.title2{
+    font-size: 40px;
+    text-align: center;
+    margin: 0px;
+    font-family: 'Graduate', cursive;
+    padding: 10px;
+}
+/* navbar */
+   #menubar{
+     width: 50px;
+     height: 10px;
+     margin: 50px 10px 10px 20px;
+     position: fixed;
+     z-index: 1;
+     cursor: pointer;
+   }
+   .bar{
+       background: orange;
+       border-radius: 10%;
+       transition: 0.4s;
+   }
+   #bar1{
+       width: 40px;
+       height: 10px;
+       transform: translateY(-4px);
+   }
+   #bar2{
+       width: 40px;
+       height: 10px;
+   }
+   #bar3{
+       width: 40px;
+       height: 10px;
+       transform: translateY(4px);
+   }
+   .change .bar{
+     background: black;
+   }
+   .change #bar1{
+       transform: translateY(6px);
+       rotate: z(45deg);
+   }
+   .change #bar3{
+       transform: translateY(-15px);
+       rotate: z(-45deg);
+   }
+   .change #bar2{
+       opacity: 0;
+   }
+   .nav li a{
+       text-decoration: none;
+       color: rgb(255, 255, 255);
+       background: black ;
+       font-size: 18px;
+       text-transform: uppercase;
+       font-weight: bold;
+       padding: 8px;
+   }
+   .nav li a:hover{
+       color: white;
+       background: orange;
+       padding-left: 10px ;
+   }
+   .nav li{
+       margin: 10px 10px 10px 10px;
+       padding-top: 10px ;
+       list-style-type: none;
+   }
+   .nav{
+       display: none;
+   }
+   .changeBtn{
+       display: block;
+   }
+/* end of navbar */
+
+/* header */
+.header{
+    min-height: 100vh;
+    background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.0)),
+    url(menu.jpg) center/cover no-repeat fixed;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+}
+.container .title{
+    color: rgb(255, 255, 255);
+    font-size: 70px;
+    background-color: rgba(255, 106, 6, 0.733);
+    height: 80px;
+    padding: 10px;
+    font-family: 'Josefin Sans', sans-serif;
+    line-height: 4.1rem;
+}
+.containerBtn{
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 13px 20px;
+    border-radius: 200px;
+    font-weight: bold;
+    background: rgb(0, 0, 0);
+    color: white;
+    cursor: pointer;
+    border: 2px solid orange;
+    margin-top: 18px;
+    font-family: 'Lato', sans-serif;
+}
+.containerBtn:hover{
+    background: white;
+    color: orange;
+    border: none;
+}
+.pulsate{
+    animation: pulsate 3s ease-in-out;
+    animation-iteration-count: infinite;
+    opacity: 0.3;
+    color: white;
+}
+@-webkit-keyframes pulsate{
+    0%{
+        opacity: 0.3;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0.3;
+    }
+}
+/* end of header */
+/* about us */
+#about{
+    padding: 40px;
+}
+.about{
+    margin: 30px 0px;
+    display: flex;
+}
+.aboutIcon .fas{
+    font-size: 60px;
+    color: rgb(250, 162, 31);
+    margin-right: 20px;
+}
+.subtitle{
+    text-transform: capitalize;
+    color: orange;
+    font-size: 25px;
+}
+.aboutinfo{
+    margin-top: 10px;
+    line-height: 1.5;
+    font-size: 18px;
+}
+.beverage{
+    font-size: 28px;
+}
+.try{
+    font-size: 24px;
+    font-weight: bold;
+}
+.aboutIcon:hover .fas,
+.subtitle:hover{
+  transition: transform 2s ease, color 2s ease;
+  transform: translateY(-10px);
+  color: #cd6100;
+  cursor: pointer;
+}
+@media screen and (min-width: 576px){
+    .aboutCenter{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .about{
+        flex: 0 0 calc(50% - 16px);
+    }
+}
+@media screen and (min-width: 972px){
+    .about{
+        flex: 0 0 calc(33.3%-16px);
+    }
+
+}
+/* end of about us */
+
+/* menu section */
+.menuImg{
+    min-height: 80vh;
+    width: 100%;
+    background: url('background.jpg') center/cover fixed no-repeat ;
+}
+.menuText{
+    min-height: 80vh;
+    align-items: center;
+    background: rgb(245, 198, 112);
+    columns: black;
+    padding: 40px 0px;
+}
+.who{
+    font-size: 22px;
+    font-weight: bold;
+}
+.menuTextCenter{
+    width: 90%;
+    margin: 0px auto;
+
+}
+.menuText h1{
+    font-size: 40px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.menuText p{
+    margin: 20px 50px;
+    line-height: 2;
+}
+.menuText a{
+    margin: 20px 50px;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 13px 20px;
+    border-radius: 200px;
+    font-weight: bold;
+    background: rgb(10,10,10);
+    color: orange;
+    cursor: pointer;
+    border: 2px solid black;
+}
+.menuText a:hover{
+    color: orange;
+    background: #fff;
+    border: none;
+}
+@media screen and (min-width:776px){
+    .menu{
+        display: flex;
+        background: rgb(245, 198, 112);
+    }
+    .menuText{
+        flex: 0 0 30%;
+    }
+    .menuImg{
+        flex: 0 0 70%;
+        clip-path: polygon(0 0,100% 0, 50% 100%, 0 100%);
+    }
+}
+@media screen and (max-width:893px){
+    .container .title{
+        font-size: 40px;
+    }
+}
+@media screen and (max-width:520px){
+    .container .title{
+        font-size: 30px;
+    }
+}
+@media screen and (max-width:395px){
+    .container .title{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width:272px){
+    .container .title{
+        font-size: 15px;
+    }
+}
+/* end of menu section */
+.socialIcons{
+    height: 150px;
+    background: white;
+    text-align: center;
+    padding: 50px 0px 50px 0px;
+}
+.socialIcons a{
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 0px 5px;
+    font-size: 40px;
+    border-radius: 5px;
+    transition: transform 2s ease, color 2s ease;
+}
+.socialIcons a:hover{
+    transform: translateY(-15px);
+}
+.facebook{
+    color:#3b5998;
+}
+.twitter{
+    color: #38a1f3;
+}
+.instagram{
+     color: #e1306e;
+}
+.googlePlus{
+    color: #db4839;
+}
+.socialIcons img{
+    height: 40px;
+    width: 40px;
+}
+/* end of menu section */
+
+/* numbers section */
+.number{
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)),
+    url('number.jpg') center/cover no-repeat fixed;
+    padding: 60px 0px;
+    color: white;
+}
+.number p{
+    font-size: 30px;
+    font-weight: bold;
+}
+.number:hover{
+    color: orange;
+}
+.number .fas{
+    font-size: 60px;
+    margin: 20px 0px;
+    cursor: pointer;
+}
+.numer h3{
+    text-transform: uppercase;
+}
+@media screen and (min-width:576px){
+    #numbers{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and (min-width:992px){
+    #numbers{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+/*end of numbers section */
+
+/* cards */
+#food{
+    padding: 20px;
+}
+.foodContainer{
+    max-width:90vw;
+    margin: 0px auto;
+}
+.foodCard{
+    position: relative;
+    background: linear-gradient(rgba(205,96,0,0.7),rgba(205,96,0,0.7));
+    margin: 20px 0px;
+    color:black;
+    overflow: hidden;
+    padding: 3px;
+    border-radius: 16px;
+    border: 1px solid orange;
+    box-shadow: 2px 3px 1px 1px #cd6100;
+}
+#food img{
+    width: 100%;
+    min-height: 100%;
+    display: block;
+    transition: transform 4s;
+}
+.imgText{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    opacity: 0;
+    transition: opacity 4s;
+}
+.imgFooter{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    padding: 10px;
+    font-size: 20px;
+    opacity: 0;
+    color: black;
+    transition: opacity 4s;   
+}
+.imgText h1{
+    font-size: 30px;
+    margin-bottom:10px ;
+}
+.foodCard:hover img{
+    opacity: 0.4;
+    transform:scale(1.3);
+}
+.foodCard:hover .imgText,
+.foodCard:hover .imgFooter{
+   opacity: 1;
+}
+.foodBtn{
+    display: inline-block;
+    background: black;
+    text-decoration: none;
+    text-transform: capitalize;
+    padding: 12px 32px;
+    color: white;
+    font-weight: bold;
+    border-radius: 180px;
+    cursor: pointer;
+    margin-top:16px;
+    transition: all 0.3s ease-in-out;
+    font-size: 18px;
+    outline: none;
+}
+.foodBtn:hover{
+   color: orange;
+   background: white;
+   background-origin: black;
+   outline:none;
+}
+.fas{
+    font-size: 30px;
+}
+@media screen and (min-width: 546px){
+    .foodContainer{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 16px;
+    }
+}
+@media screen and (min-width:992px){
+    .foodContainer{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 16px;
+    }
+}
+/* end of cards */
+
+/* gallery */
+#gallery{
+    padding: 10px;
+    background: white;
+}
+.galleryItem{
+    background: linear-gradient(rgba(241,161,13)rgb(rgb(255,165,0)));
+}
+.galleryItem img{
+    display: block;
+    width: 100%;
+    opacity: 1;
+    transition: opacity 2s ease;
+}
+.galleryItem img:hover{
+    opacity: 0.5;
+}
+@media screen and (min-width: 576px){
+    #galleryCenter{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and (min-width:992px){
+    #galleryCenter{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+/* end of gallery */
+
+/* contact section */
+#contact{
+    position: relative;
+}
+#contact{
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)),
+    url('contact.jpg') center/cover no-repeat fixed;
+    padding: 60px 0px;
+    color: white;
+}
+#contact-box input,
+#contact-box textarea{
+width: 100%;
+padding: 0.5rem;
+border-radius: 12px;
+font-size: 1.1rem;
+
+}
+#contact-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+#contact-box form{
+    width: 30%;
+
+}
+#contact-box form label{
+    font-size: 1.3rem;
+    font-family: 'Bree Serif', serif;
+}
+/* end of contact section */
+
+/* footer */
+.footer{
+    background: black;
+    text-align: center;
+}
+.footer .text{
+    text-transform: uppercase;
+    color: white;
+    font-size: 14px;
+    margin-top: 20px;
+}
+/* end of footer */
